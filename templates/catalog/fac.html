@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <center> <form class="form" id="searchform" action="{% url 'search_f' %}" method="get">
+    <div class="form-group">
+    <input type="text" class="col-5  form-control-lg"  placeholder="search faculty" name="q" type="text"/>
+    <button type="button"  class="btn btn-success form-control-lg" onclick="searchform.submit()">Search</button>
+        </div>
+</form>
+   </center>
+    <div class="container">
+        <strong><h3>Faculty List</h3></strong>
+        {% for f in faculty_list %}
+            <ul>
+                <li><a href="{% url 'branch' f.id %}" class="text-danger"><h5>{{ f.name }}</h5></a></li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}

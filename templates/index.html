@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="container">
+	<center>
+	 <h3>
+	 	WELCOME <!-- {{ request.user}}-->
+    <br>
+	 	Browse Our Library for <a href="{% url 'books' %}">Books</a>
+	 </h3>
+</center>
+</div>
+
+<!--crousel-->
+
+<!--<div class="container">
+<div id="carouselExampleSlidesOnly" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img  width="98%" height=450px src="/media/book_image/photo1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img  width="98%" height=450px src="/media/book_image/photo3.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img  width="98%" height=450px src="/media/book_image/photo2.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img  width="98%" height=450px src="/media/book_image/photo4.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
+</div>
+-->
+
+{%endblock%}
